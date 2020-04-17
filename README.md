@@ -1,24 +1,21 @@
-# README
+# <アプリ名>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+移動販売車(キッチンカー)の販売、閲覧サイト及び管理者側での運営管理。
 
-Things you may want to cover:
+### サイトテーマ
+自身で移動販売車で営業することを想定したサイトを製作。
 
-* Ruby version
+### テーマを選んだ理由
+自分の考える将来やってみたいビジネスプランを具現化してみようと思い製作しました。
 
-* System dependencies
+### ターゲットユーザ
+ビジネス街の労働者に向けた販売、閲覧及び運営側の管理ができるサイト。
 
-* Configuration
+### 主な利用シーン
+ランチ時
 
-* Database creation
+## 設計書
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 機能一覧
+https://docs.google.com/spreadsheets/d/14GaNrCdtpXdACJL4Tne3bEBn2R-asZTjfc7mfC4snjw/edit#gid=0
