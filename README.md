@@ -1,4 +1,4 @@
-Area42
+#Area42
 
 ## サイト概要
 移動販売車(キッチンカー)の販売、閲覧サイト及び管理者側での運営管理。
@@ -16,6 +16,7 @@ Area42
 ランチ時
 
 ## 設計書
+https://drive.google.com/drive/folders/1b-tu8owZPxQVaSUIJoY0jJsVZf8moG-j?usp=sharing
 
 ### 機能一覧
 https://docs.google.com/spreadsheets/d/14GaNrCdtpXdACJL4Tne3bEBn2R-asZTjfc7mfC4snjw/edit#gid=0
