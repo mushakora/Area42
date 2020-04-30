@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'home/about'
   get 'home/login'
   get 'admin/home/top'
-  get 'coupon/index'
+  get 'coupons/index'
   devise_for :admins
   devise_for :users
   get 'users/withdrawal', to: 'users#withdrawal'

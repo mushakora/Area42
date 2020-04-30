@@ -1,1 +1,31 @@
-<h1>user_show</h1>
+<div class="container">
+  <div class="row">
+	<h2>会員詳細</h2>
+	<table class="table col-xs-10 col-xs-offset-1">
+	  <tr>
+		<th>氏名</th>
+		<th><%= @user.name %></th>
+	  </tr>
+
+	  <tr>
+		<th>メールアドレス</th>
+		<th><%= @user.email %></th>
+	  </tr>
+
+	  <tr>
+		<th>利用予定住所</th>
+		<th><%= @user.address %></th>
+	  </tr>
+
+	  <tr>
+        <th>誕生日</th>
+	    <th><%= @user.birthday %></th>
+	  </tr>
+
+
+	  <tr>
+	    <th><%= link_to '編集する', edit_user_path(@user), class: "btn btn-primary col-xs-6" %></th>
+	  </tr>
+	</table>
+  </div>
+</div>

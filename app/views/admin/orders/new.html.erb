@@ -1,2 +1,29 @@
-<h1>Admin::Orders#new</h1>
-<p>Find me in app/views/admin/orders/new.html.erb</p>
+<div class="container">
+  <div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+  <h2>発注書作成</h2>
+
+  <table class="table">
+	<thead>
+		<tr>
+			<th>名前</th>
+			<th>ジャンル</th>
+		</tr>
+	</thead>
+
+	<tbody>
+    <%=form_for @order, url: admin_order_path(@order.id) %>
+		<% @materials.each do |material| %>
+		<tr>
+            <td><%= material.name %></td>
+            <td><%= material.genre %></td>
+            <td><%= f.select :material_count,option_for_select((1..10)) %></td>
+		</tr>
+    <%= f.submit '発注書作成', class: "btn btn-primary" %>
+		<% end %>
+    <% end %>
+	</tbody>
+  </table>
+  </div>
+  </div>
+</div>

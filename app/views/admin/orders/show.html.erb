@@ -1,2 +1,25 @@
-<h1>Admin::Orders#show</h1>
-<p>Find me in app/views/admin/orders/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <h3>発注書詳細</h3>
+	<table>
+		<thead>
+			<tr>
+				<th>発注日</th>
+				<th>ジャンル</th>
+				<th>名前</th>
+				<th>個数</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @materials.each do |materiarl| %>
+          <tr>
+			<td><%= material.order.created_at.strftime('%Y/%m/%d') %></td>
+			<td><%= material.genre %></td>
+		    <td><%= material.name %></td>
+		    <td><%= material.material_count %></td>
+		  </tr>
+		    <% end %>
+		</tbody>
+    </table>
+  </div>
+</div>

@@ -1,1 +1,10 @@
-<h1>user_withdrawal</h1>
+<div class="container">
+  <div class="center-block">
+    <h2 class="text-center">本当に退会しますか？</h2>
+      <p>退会すると誕生日割引やクーポンのご利用ができなくなります</p>
+
+      <div><%= link_to '退会しない', user_path(current_user), class: "btn btn-info" %>
+      	   <%= link_to '退会する', users_hide_path(current_user), data: { confirm: "本当に退会しますか？" }, method: :put, class: "btn btn-danger" %>
+      </div>
+  </div>
+</div>

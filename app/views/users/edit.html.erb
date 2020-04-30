@@ -1,1 +1,56 @@
-<h1>user_edit</h1>
+<div class="container">
+  <div class="row">
+    <% if @user.errors.any? %>
+    <div id="error-explanation">
+      <h2><%= @user.errors.count %> errors prohibited this book from being saved:</h2>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <h2>会員編集</h2>
+
+    <table class="table">
+      <%= form_for(@user, url: admin_user_path) do |f| %>
+      <div class="field">
+        <tr>
+          <th><%= f.label :氏名 %></th>
+          <th><%= f.text_field :first_name %></th>
+          <th><%= f.text_field :last_name %></th>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr>
+          <th><%= f.label :メールアドレス %></th>
+          <th><%= f.email_field :email, class: "col-xs-12" %></th>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr>
+          <th><%= @user.birthday %></th>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr>
+          <th><%= f.label :利用予定住所 %></th>
+          <th><%= f.select :address,options_for_select([['六本木', '六本木'], ['銀座', '銀座'],['赤坂','赤坂']]), class: "btn btn-info" %></th>
+        </tr>
+      </div>
+
+      <div class="actions">
+        <tr>
+          <th><%= f.submit "変更を保存する", class: "btn btn-primary" %></th>
+          <th><%= link_to "退会する", users_withdrawal_path(current_user), class: "btn btn-danger" %></th>
+        </tr>
+      </div>
+      <% end %>
+    </table>
+
+  </div>
+</div>
