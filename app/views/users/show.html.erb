@@ -19,7 +19,11 @@
 
 	  <tr>
         <th>誕生日</th>
-	    <th><%= @user.birthday %></th>
+        <% if @user.birthday.present? %>
+	    <th><%= @user.birthday.strftime('%-m月  %-d日') %></th>
+        <% else %>
+        <th>未登録</th>
+        <% end %>
 	  </tr>
 
 

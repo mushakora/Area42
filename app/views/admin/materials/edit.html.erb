@@ -4,7 +4,7 @@
   <h2>食材・備品編集</h2>
 
   <div class="new materials">
-    <%= form_for(@material, url: admin_materials_path) do |f| %>
+    <%= form_for(@material, url: admin_material_path) do |f| %>
     <%= "名前" %>
     <%= f.text_field :name %>
     <%= "ジャンル" %>

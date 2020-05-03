@@ -36,9 +36,8 @@ class UsersController < ApplicationController
   def correct_user
       if user_signed_in?
          user = User.find(params[:id])
-         if current_user.id != user.id
+      else
             redirect_to root_path
-         end
       end
   end
 

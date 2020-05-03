@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   put '/users/:id/hide' => 'users#hide', as: 'users_hide'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users, only: [:show, :edit, :update]
-  resources :items, only: [:index, :show]
+  resources :items, only: [:index, :show] do
+    resource :favorites, only: [:create, :destroy]
+  end
 
   namespace :admin do
     resources :users, only: [:index, :show, :edit, :update]

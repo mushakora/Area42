@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-10">
       <table class="table">
-       <h2>商品一覧(全<%= @items.count %>)件</h2>
+       <h2>商品一覧</h2>
        <div class="row">
          <% @items.each do |item| %>
          <% if item.sale_status == '販売中' %>
@@ -13,7 +13,24 @@
             </td>
             <td><%= item.name %></td>
             <td>¥<%= item.price %></td>
+            <% if user_signed_in? %>
+            <% if item.favorited_by?(current_user) %>
+          <td>
+            <%= link_to item_favorites_path(item_id: item), method: :delete do %>
+            <i class="fa fa-heart" aria-hidden="true" ></i>
+            <%= item.favorites.count %>
+            <% end %>
+          </td>
+          <% else %>
+          <td>
+            <%= link_to item_favorites_path(item_id: item), method: :post do %>
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <%= item.favorites.count %>
+            <% end %>
+          </td>
+          <% end %>
           </tr>
+        <% end %>
         <% end %>
         <% end %>
       </div>
