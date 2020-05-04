@@ -11,9 +11,9 @@
 			</tr>
 		</thead>
 		<tbody>
-			<% @materials.each do |materiarl| %>
+			<% @order.order_material.each do |materiarl| %>
           <tr>
-			<td><%= material.order.created_at.strftime('%Y/%m/%d') %></td>
+			<td><%= material.created_at.strftime('%Y/%m/%d') %></td>
 			<td><%= material.genre %></td>
 		    <td><%= material.name %></td>
 		    <td><%= material.material_count %></td>

@@ -12,15 +12,18 @@
 	</thead>
 
 	<tbody>
-    <%= form_for @order, url: admin_orders_path do |f| %>
+    <%= form_for [@order,@order_material], url: admin_order_materials_path do |f| %>
 		  <% @materials.each do |material| %>
-		<tr>
-            <td><%= material.name %></td>
-            <td><%= material.genre %></td>
-            <td><%= f.select :material_count,options_for_select((0..10)) %></td>
-		</tr>
+		    <tr>
+          <%= f.hidden_field :material_id, value: material.id %>
+          <td><%= material.name %></td>
+          <td><%= material.genre %></td>
+          <td><%= f.select :material_count,options_for_select((0..10)) %></td>
+		    </tr>
       <% end %>
-    <%= f.submit '発注書作成', class: "btn btn-primary" %>
+    <%= f.label :納品日 %>
+    <%= f.date_select :delivery_date, discard_year: true, use_month_numbers: true, date_separator: '月', selected:Date.tomorrow %>日
+    <%= f.submit '発注書作成', class: "btn btn-primary pull-right" %>
     <% end %>
 	</tbody>
   </table>

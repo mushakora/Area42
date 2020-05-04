@@ -1,3 +1,3 @@
 class Order < ApplicationRecord
-  belongs_to :material
+  has_many :order_material
 end

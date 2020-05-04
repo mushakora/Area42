@@ -6,23 +6,27 @@ class Admin::OrdersController < ApplicationController
 
   def show
   	  @order = Order.find(params[:id])
-      @materials = @order.materials
   end
 
   def new
   	  @materials = Material.all
   	  @order = Order.new
+      @order_material = OrderMaterial.new
+      render 'new'
   end
 
   def create
-  	  @order = Order.new(order_params)
-  	  @order.save
-  	  redirect_to admin_order_path(@order)
+  	  @order = Order.new
+  	  if @order.save
+  	    redirect_to admin_order_path(@order)
+      else
+        render 'new'
+      end
   end
 
   private
-  def order_params
-  	  params.require(:order).permit(:material_id, :material_count)
+  def order_material_params
+      params.require(:order).permit(:delivery_date)
   end
 
   def admin_user

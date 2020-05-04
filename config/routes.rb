@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :orders, only: [:index, :show, :new, :create]
     resources :materials, only: [:index, :edit, :create, :update]
     resources :items, only: [:index, :show, :new, :create, :edit, :update]
+    resources :order_materials, only: [:create]
   end
 
 end
