@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   def hide
       @user = User.find(params[:id])
-      @user.update(delete_at: true)
+      @user.update(deleted_at: true)
       @user.update(user_status: '退会済')
       reset_session
       redirect_to root_path
@@ -36,8 +36,9 @@ class UsersController < ApplicationController
   def correct_user
       if user_signed_in?
          user = User.find(params[:id])
-      else
+         if current_user.id !=  user.id
             redirect_to root_path
+         end
       end
   end
 

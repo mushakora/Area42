@@ -1,9 +1,11 @@
 <div class="container">
   <div class="row">
-  	<%= link_to "user", admin_users_path, class: "btn btn-info" %>
-  	<%= link_to "item", admin_items_path, class: "btn btn-success" %>
-  	<%= link_to "material", admin_materials_path, class: "btn btn-primary" %>
-  	<%= link_to "order", admin_orders_path, class: "btn btn-danger" %>
-  	<%= link_to "user-top", items_path,class: "btn btn-warning" %>
+    <%= link_to "会員一覧", admin_users_path, class: "btn btn-info" %>
+    <%= link_to "弁当一覧", admin_items_path, class: "btn btn-success" %>
+    <%= link_to "食材一覧", admin_materials_path, class: "btn btn-primary" %>
+    <%= link_to "発注一覧", admin_orders_path, class: "btn btn-danger" %>
+    <%= link_to "ホームページ", home_top_path,class: "btn btn-warning" %>
+    <%= link_to "発注書作成", new_admin_order_path,class: "btn btn-info
+    " %>
   </div>
 </div>
