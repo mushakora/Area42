@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :correct_user, only:[:show, :edit, :hide, :update]
   def show
       @user = current_user
+      @item = Item.find(4)
   end
 
   def edit

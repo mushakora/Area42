@@ -1,10 +1,11 @@
 <div class="container">
   <div class="row">
-	<h3>発注一覧</h3>
+	<h2 style="text-align: center; margin-top: 50px;">発注一覧</h2>
 	  <table class="table">
 		<thead>
 		  <tr>
 			<th>発注日</th>
+			<th>納品日</th>
 		  </tr>
 		</thead>
 
@@ -12,6 +13,7 @@
 		  <% @orders.each do |order| %>
 			<tr>
 			  <td><%#= link_to order.created_at.strftime('%Y/%m/%d'), order_path(order.id) %></td>
+			  <td><%#= link_to order.derivery_date, order_path(order.id) %></td>
 			</tr>
 		  <% end %>
 		  <%= paginate @orders, class: "pagenate" %>

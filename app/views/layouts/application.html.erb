@@ -9,18 +9,19 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Economica:700" rel="stylesheet">
   </head>
 
   <body>
     <header>
-  <nav class="navbar navbar-default" style="background-color: #DDFFFF; margin-bottom: 0px;">
+  <nav class="navbar navbar-default" style="background-color: #99CCFF; margin-bottom: 0px;">
     <div class="container-field">
       <div class="navbar-header">
         <p class="navbar-brand"></p>
       </div>
       <div id="navbarEexample7">
-      <a class="navbar-logo" href="/" style="background-color: #EEE8AA;">
-        <%#= image_tag('logo.jpg') %>
+      <a class="header_shop_name" href="/" style="text-decoration: none;">
+      Area 42
       </a>
       <ul class="nav navbar-nav navbar-right" style="padding-right: 20px;">
         <% if admin_signed_in? %>
@@ -34,13 +35,13 @@
   <!-- お客さんのヘッダー-->
         <% elsif user_signed_in? %>
 
-        <p class="navbar-text" style="font-size: 20px; font-family: Hannari;">ようこそ  <%= current_user.name %>  さん。</p>
+        <p class="navbar-text" style="font-size: 15px; font-family: Hannari;">ようこそ  <%= current_user.name %>  さん。</p>
 
         <li><%= link_to "このサイトについて", home_about_path %></li>
 
         <li><%= link_to "マイページ", user_path(current_user.id) %></li>
 
-        <li><%= link_to "商品一覧", items_path %></li>
+        <li><%= link_to "メニュー", items_path %></li>
 
         <li><%= link_to "クーポン", coupons_index_path %></li>
 
@@ -52,7 +53,7 @@
 
         <li><%= link_to "このサイトについて", home_about_path %></li>
 
-        <li><%= link_to "商品一覧" , items_path %></li>
+        <li><%= link_to "メニュー" , items_path %></li>
 
         <li><%= link_to "新規登録" , new_user_registration_path %></li>
 
@@ -64,19 +65,24 @@
       </div>
     </nav>
     </header>
+    <div class="main_background_image">
 
     <%= yield %>
 
-    <footer class="footer">
+    </div>
+    <footer class="footer" style="background-color: #330000;">
     <div class="container">
       <div class="row">
-        <%#= link_to home_about_path do %>
-        <span class='pull-right'>
-        <%#= image_tag('logo2.jpg') %>
-        </span>
-        <%# end %>
-        <div class='col-xs-6 col-xs-offset-6'>
-        <p>powered by Area42</p>
+        <h4 style="color: white;">街の働き者を応援するキッチンカー</h4>
+        <ul>
+          <li>
+            <a href="/" style="color: white;">サイトトップ</a>
+          </li>
+          <li>
+            <a href="/admins/sign_in" style="color: white;">管理者トップ</a>
+          </li>
+        </ul>
+        <p style="float: right; color: white;">powered by Area42</p>
         </div>
       </div>
     </div>

@@ -1,8 +1,7 @@
 class CouponsController < ApplicationController
   before_action :authenticate_user!
   def index
-  	  @item = Item.find(params[:id])
-  	  session[:item][:coupon_price] = 50
+  	  @item = Item.find(4)
   end
 
   private

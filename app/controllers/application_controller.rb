@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 	  when Admin
 	  	admin_home_top_path
 	  when User
-	    home_top_path
+	    items_path
 	  end
 	end
 

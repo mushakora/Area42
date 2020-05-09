@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
-  <div class="col-xs-10 col-xs-offset-1">
-  <h2>発注書作成</h2>
+  <h2 style="text-align: center; margin-top: 50px;">発注書作成</h2>
 
   <%= form_with url: admin_orders_path do |form| %>
+  <div class="col-xs-10 col-xs-offset-1">
   <table class="table">
   <thead>
     <tr>
@@ -25,10 +25,10 @@
     <% end %>
   </tbody>
   </table>
-  <%= form.label :納品日 %>
-  <%= form.date_select :delivery_date, discard_year: true, use_month_numbers: true, date_separator: '月', selected:Date.tomorrow %>
-  <%= form.submit '発注書作成', class: "btn btn-primary" %>
-  <% end %>
   </div>
+  <div class="date_info"><%= form.label :納品日, class: "col-xs-offset-2" %>
+  <%= form.date_select :delivery_date, discard_year: true, use_month_numbers: true, date_separator: '月', selected:Date.tomorrow %></div>
+  <%= form.submit '発注書作成', class: "btn btn-primary pull-right" %>
+  <% end %>
   </div>
 </div>
