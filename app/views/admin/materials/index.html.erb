@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
   <h2 style="text-align: center; margin-top: 50px;">食材・備品一覧</h2>
+  <div class="font_info">
   <div class="col-xs-10 col-xs-offset-1">
   <div style="text-align: center;">
     <%= form_for(@material, url: admin_materials_path) do |f| %>
@@ -30,6 +31,7 @@
 		<% end %>
 	</tbody>
   </table>
+  </div>
   </div>
   </div>
 </div>

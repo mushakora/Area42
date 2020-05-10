@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <h2 style="text-align: center; margin-top: 100px;">弁当一覧</h2>
+    <div class="font_info">
     <div class="col-xs-10 col-xs-off-1">
       <table class="table">
         <% @items.each do |item| %>
@@ -10,14 +11,13 @@
               <%= attachment_image_tag(item, :image, :fill,150,150,fallback: "no_image.jpg") %>
               <% end %>
           </td>
-          <div class="item_font">
           <td><%= item.name %></td>
           <td>¥<%= item.price %></td>
-          </div>
+
           <% if user_signed_in? %>
                 <% if item.favorited_by?(current_user) %>
                   <td><%= link_to item_favorites_path(item_id: item), :style=>"text-decoration: none;", method: :delete do  %>
-                  <div class="star">
+                  <div class="star_position">
                   <i class="fas fa-star" aria-hidden="true" ></i>
                   <%= item.favorites.count %>
                   </div>
@@ -25,7 +25,7 @@
                   <% end %>
                 <% else %>
                   <td><%= link_to item_favorites_path(item_id: item), :style=>"text-decoration: none;", method: :post do %>
-                  <div class="star">
+                  <div class="star_position">
                   <i class="far fa-star" aria-hidden="true"></i>
                   <%= item.favorites.count %>
                   </div>
@@ -33,9 +33,11 @@
                   <% end %>
                 <% end %>
               <% end %>
+          </tr>
         <% end %>
         <% end %>
       </table>
+    </div>
     </div>
     <% unless user_signed_in? %>
     <p class="login_phote">
