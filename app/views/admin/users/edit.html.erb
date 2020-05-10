@@ -32,10 +32,12 @@
           <th><%= f.select :address,options_for_select([["未選択","未選択"],['六本木', '六本木'], ['銀座', '銀座'],['赤坂','赤坂']]), class: "btn btn-info" %></th>
         </tr>
 
+        <div class="setday">
         <tr>
           <th><%= f.label :誕生日 %></th>
           <th><%= f.date_select :birthday, discard_year: true, use_month_numbers: true, date_separator: '月',prompt: "--" %>日</th>
         </tr>
+        </div>
 
         <tr>
           <th><%= f.label :メモ %></th>

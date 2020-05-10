@@ -9,29 +9,36 @@ class Admin::OrdersController < ApplicationController
   end
 
   def new
-      materials = Material.all
-      @order_materials = []
-      materials.each do |material|
-        order_material = OrderMaterial.new(material: material)
-        @order_materials.push(order_material)
-      end
+    @order = Order.new
+    @materials = Material.all
+    @order.order_materials.build
+    #materials.each do |material|
+    #  @order.order_materials.build({material_id: material.id, material: material})
+    #end
+    # binding.pry
+
+      # materials = Material.all
+      # @order_materials = []
+      # materials.each do |material|
+      #   order_material = OrderMaterial.new(material: material)
+      #   @order_materials.push(order_material)
+      # end
   end
 
-
-
   def create
-      @order = Order.new(order_params)
-      redirect_to admin_orders_path
+    @order = Order.new(order_params)
+    @order.save
+    redirect_to admin_orders_path
   end
 
   private
   def order_params
-    params.permit(:dalivery_date)
+    params.require(:order).permit(:delivery_date, order_materials_attributes: [:material_id, :material_count])
   end
 
   def admin_user
-      unless admin_signed_in?
+    unless admin_signed_in?
       redirect_to root_path
-      end
+    end
   end
 end

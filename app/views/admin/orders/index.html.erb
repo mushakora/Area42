@@ -2,6 +2,7 @@
   <div class="row">
 	<h2 style="text-align: center; margin-top: 50px;">発注一覧</h2>
 	<div class="font_info">
+	<div class="col-xs-10 col-xs-offset-1">
 	  <table class="table">
 		<thead>
 		  <tr>
@@ -13,13 +14,14 @@
 		<tbody>
 		  <% @orders.each do |order| %>
 			<tr>
-			  <td><%#= link_to order.created_at.strftime('%Y/%m/%d'), order_path(order.id) %></td>
-			  <td><%#= link_to order.derivery_date, order_path(order.id) %></td>
+			  <td><%= order.created_at.strftime('%Y/%m/%d') %></td>
+			  <td><%= link_to order.delivery_date.strftime('%Y/%m/%d'), admin_order_path(order.id), :style=>"color:black;" %></td>
 			</tr>
 		  <% end %>
-		  <%= paginate @orders, class: "pagenate" %>
 		</tbody>
 	  </table>
+	  <%= paginate @orders, class: "pagenate"%>
+	</div>
 	</div>
   </div>
 </div>
