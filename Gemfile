@@ -70,3 +70,8 @@ gem 'jquery-rails'
 
 gem 'kaminari','~> 1.1.1'
 gem 'pry-byebug'
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
