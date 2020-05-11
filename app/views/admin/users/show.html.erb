@@ -1,40 +1,40 @@
 <div class="container">
   <div class="row">
 	<h2 style="text-align: center; margin-top: 50px;">会員詳細</h2>
-  <div class="font_info">
-  <div class="col-xs-10 col-xs-offset-1">
-	<table class="table">
-	  <tr>
-		<th>氏名</th>
-		<th><%= @user.name %></th>
-	  </tr>
+      <div class="font_info">
+        <div class="col-xs-10 col-xs-offset-1">
+	      <table class="table">
+	        <tr>
+		      <th>氏名</th>
+		      <th><%= @user.name %></th>
+	        </tr>
 
-	  <tr>
-		<th>メールアドレス</th>
-		<th><%= @user.email %></th>
-	  </tr>
+			<tr>
+		      <th>メールアドレス</th>
+			  <th><%= @user.email %></th>
+			</tr>
 
-	  <tr>
-		<th>住所</th>
-		<th><%= @user.address %></th>
-	  </tr>
+		    <tr>
+			  <th>住所</th>
+		      <th><%= @user.address %></th>
+			</tr>
 
-	  <tr>
-        <th>誕生日</th>
-        <% if @user.birthday.present? %>
-	    <th><%= @user.birthday.strftime('%-m月  %-d日') %></th>
-        <% else %>
-        <th>未登録</th>
-        <% end %>
-	  </tr>
+			<tr>
+		      <th>誕生日</th>
+		        <% if @user.birthday.present? %>
+			      <th><%= @user.birthday.strftime('%-m月  %-d日') %></th>
+		        <% else %>
+		          <th>未登録</th>
+		        <% end %>
+			</tr>
 
-	  <tr>
-		<th>メモ</th>
-		<th><%= @user.note %></th>
-	  </tr>
-	</table>
-	    <%= link_to '編集する', edit_admin_user_path(@user), class: "btn btn-primary col-xs-offset-5" %>
-	</div>
-    </div>
+			<tr>
+			  <th>メモ</th>
+		      <th><%= @user.note %></th>
+			</tr>
+	      </table>
+	      <%= link_to '編集する', edit_admin_user_path(@user), class: "btn btn-primary col-xs-offset-5" %>
+	    </div>
+      </div>
   </div>
 </div>

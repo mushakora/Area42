@@ -1,7 +1,6 @@
 <div class="container">
   <div class="row">
     <h4 style="text-align: center; margin-top: 100px;">会員の方はこちらからログイン</h4>
-    <%= flash[:error] %>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="col-xs-8 col-xs-offset-2">
           <table class="table">
@@ -15,14 +14,9 @@
               <th><%= f.password_field :password, autocomplete: "current-password" %></th>
             </tr>
           </table>
-
-        <div class="last_button">
-        <h6><%#= link_to "=>パスワードを忘れた方はこちら", new_user_password_path, class: "col-xs-offset-left4" %></h6>
         <%= f.submit "ログイン", class: "btn btn-primary col-xs-offset-5" %>
         </div>
-      </div>
       <% end %>
-      <a><%#= link_to "新規登録の方はこちら", new_user_registration_path %></a>
-  </div>
   </div>
 </div>
+

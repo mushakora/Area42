@@ -1,30 +1,31 @@
 <div class="container">
   <div class="row">
     <h3 style="text-align: center; margin-top: 50px;">発注書詳細</h3>
-    <div class="font_info">
-    <h3 style="text-align: center; margin-top: 50px; margin-bottom: 50px;">納品日  <%= @order.delivery_date.strftime('%Y/%m/%d') %></h3>
-    <div class="col-xs-10 col-xs-offset-1">
-	<table class="table">
-		<thead>
-			<tr>
-				<th>ジャンル</th>
-				<th>名前</th>
-				<th>個数</th>
-			</tr>
-		</thead>
-		<tbody>
-		<% @order.order_materials.each do |order_material| %>
-          <% if order_material.material_count > 0 %>
-            <tr>
-			  <td><%= order_material.material.genre %></td>
-		      <td><%= order_material.material.name %></td>
-		      <td><%= order_material.material_count %></td>
-		    </tr>
-		   <% end %>
-		<% end %>
-		</tbody>
-    </table>
-    </div>
-    </div>
+      <div class="font_info">
+        <h3 style="text-align: center; margin-top: 50px; margin-bottom: 50px;">納品日  <%= @order.delivery_date.strftime('%Y/%m/%d') %></h3>
+          <div class="col-xs-10 col-xs-offset-1">
+	        <table class="table">
+		      <thead>
+			    <tr>
+				  <th>ジャンル</th>
+				  <th>名前</th>
+				  <th>個数</th>
+			    </tr>
+		      </thead>
+
+		      <tbody>
+		        <% @order.order_materials.each do |order_material| %>
+                  <% if order_material.material_count > 0 %>
+                    <tr>
+			          <td><%= order_material.material.genre %></td>
+		              <td><%= order_material.material.name %></td>
+		              <td><%= order_material.material_count %></td>
+		            </tr>
+		          <% end %>
+		        <% end %>
+		      </tbody>
+            </table>
+          </div>
+      </div>
   </div>
 </div>

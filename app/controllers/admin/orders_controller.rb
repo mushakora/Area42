@@ -12,17 +12,6 @@ class Admin::OrdersController < ApplicationController
     @order = Order.new
     @materials = Material.all
     @order.order_materials.build
-    #materials.each do |material|
-    #  @order.order_materials.build({material_id: material.id, material: material})
-    #end
-    # binding.pry
-
-      # materials = Material.all
-      # @order_materials = []
-      # materials.each do |material|
-      #   order_material = OrderMaterial.new(material: material)
-      #   @order_materials.push(order_material)
-      # end
   end
 
   def create

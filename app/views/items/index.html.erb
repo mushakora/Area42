@@ -1,47 +1,47 @@
 <div class="container">
   <div class="row">
     <h2 style="text-align: center; margin-top: 100px;">弁当一覧</h2>
-    <div class="font_info">
-    <div class="col-xs-10 col-xs-off-1">
-      <table class="table">
-        <% @items.each do |item| %>
-        <% if item.sale_status == '販売中' %>
-        <tr>
-          <td><%= link_to item_path(item.id) do %>
-              <%= attachment_image_tag(item, :image, :fill,150,150,fallback: "no_image.jpg") %>
-              <% end %>
-          </td>
-          <td><%= item.name %></td>
-          <td>¥<%= item.price %></td>
+      <div class="font_info">
+        <div class="col-xs-10 col-xs-off-1">
+          <table class="table">
+            <% @items.each do |item| %>
+              <% if item.sale_status == '販売中' %>
+                <tr>
+                  <td><%= link_to item_path(item.id) do %>
+                    <%= attachment_image_tag(item, :image, :fill,150,150,fallback: "no_image.jpg") %>
+                      <% end %>
+                  </td>
+                  <td><%= item.name %></td>
+                  <td>¥<%= item.price %></td>
 
-          <% if user_signed_in? %>
-                <% if item.favorited_by?(current_user) %>
-                  <td><%= link_to item_favorites_path(item_id: item), :style=>"text-decoration: none;", method: :delete do  %>
-                  <div class="star_position">
-                  <i class="fas fa-star" aria-hidden="true" ></i>
-                  <%= item.favorites.count %>
-                  </div>
-                  </td>
+                  <% if user_signed_in? %>
+                    <% if item.favorited_by?(current_user) %>
+                      <td><%= link_to item_favorites_path(item_id: item), :style=>"text-decoration: none;", method: :delete do  %>
+                        <div class="star_position">
+                          <i class="fas fa-star" aria-hidden="true" ></i>
+                          <%= item.favorites.count %>
+                        </div>
+                      </td>
+                          <% end %>
+                  <% else %>
+                      <td><%= link_to item_favorites_path(item_id: item), :style=>"text-decoration: none;", method: :post do %>
+                        <div class="star_position">
+                          <i class="far fa-star" aria-hidden="true"></i>
+                          <%= item.favorites.count %>
+                        </div>
+                      </td>
+                          <% end %>
+                    <% end %>
                   <% end %>
-                <% else %>
-                  <td><%= link_to item_favorites_path(item_id: item), :style=>"text-decoration: none;", method: :post do %>
-                  <div class="star_position">
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <%= item.favorites.count %>
-                  </div>
-                  </td>
-                  <% end %>
-                <% end %>
+                </tr>
               <% end %>
-          </tr>
-        <% end %>
-        <% end %>
-      </table>
-    </div>
-    </div>
+            <% end %>
+          </table>
+        </div>
+      </div>
     <% unless user_signed_in? %>
-    <p class="login_phote">
-    </p>
+      <p class="login_phote">
+      </p>
       <p class="login_top">
         会員登録でよりお得に
       </p>
@@ -50,8 +50,8 @@
         お弁当選挙に参加していただけます。
       </p>
         <%= link_to new_user_registration_path do %>
-        <div class="sign_up_form">会員登録
-        </div>
+      <div class="sign_up_form">会員登録
+      </div>
         <% end %>
     <% end %>
 
@@ -64,7 +64,7 @@
           </tr>
           <tr>
             <th>出店場所</th>
-            <th>六本木　銀座　赤坂</th>
+            <th>六本木  銀座  赤坂</th>
           </tr>
           <tr>
             <th>出店時間</th>
@@ -72,6 +72,6 @@
           </tr>
         </table>
     </div>
-        <p class="shop_phote"></p>
- </div>
+    <p class="shop_phote"></p>
+  </div>
 </div>
