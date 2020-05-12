@@ -1,11 +1,11 @@
 class Admin::OrdersController < ApplicationController
   before_action :admin_user
   def index
-      @orders = Order.page(params[:page]).reverse_order.per(10)
+    @orders = Order.page(params[:page]).reverse_order.per(10)
   end
 
   def show
-      @order = Order.find(params[:id])
+    @order = Order.find(params[:id])
   end
 
   def new
