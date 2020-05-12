@@ -26,7 +26,9 @@
       <ul class="nav navbar-nav navbar-right" style="padding-right: 20px;">
         <% if admin_signed_in? %>
 
+        <div class="btn">
         <li><%= link_to "管理画面TOP" , admin_home_top_path %></li>
+        </div>
 
         <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
          </li>
