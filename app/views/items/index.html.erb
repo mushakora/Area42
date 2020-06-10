@@ -15,23 +15,9 @@
                   <td>¥<%= item.price %></td>
 
                   <% if user_signed_in? %>
-                    <% if item.favorited_by?(current_user) %>
-                      <td><%= link_to item_favorites_path(item_id: item), :style=>"text-decoration: none;", method: :delete do  %>
-                        <div class="star_position">
-                          <i class="fas fa-star" aria-hidden="true" ></i>
-                          <%= item.favorites.count %>
-                        </div>
-                      </td>
-                          <% end %>
-                  <% else %>
-                      <td><%= link_to item_favorites_path(item_id: item), :style=>"text-decoration: none;", method: :post do %>
-                        <div class="star_position">
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <%= item.favorites.count %>
-                        </div>
-                      </td>
-                          <% end %>
-                    <% end %>
+                    <td class="item_<%= item.id %>">
+                      <%= render 'items/popular', item: item %>
+                    </td>
                   <% end %>
                 </tr>
               <% end %>
@@ -73,5 +59,6 @@
         </table>
     </div>
     <p class="shop_phote"></p>
+
   </div>
 </div>
