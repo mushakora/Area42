@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def index
-  	  @items = Item.all
+      @items = Item.all
+      @item_ranking = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(3).pluck(:item_id))
   end
 
   def show
