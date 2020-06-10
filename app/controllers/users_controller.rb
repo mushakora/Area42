@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :correct_user, only:[:show, :edit, :hide, :update]
   def show
       @user = current_user
-      @item = Item.find(4)
+      @item_ranking = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(3).pluck(:item_id))
   end
 
   def edit

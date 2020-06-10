@@ -21,15 +21,14 @@
 			          <th>税込価格</th>
 	    	        <th><%= @item.price %>円</th>
 	    	      </tr>
-	          </table>
               <% if user_signed_in? %>
                 <tr>
-                  <th><p class="item_<%= item.id %>">
-                          <%= render 'items/popular', item: @item %>
-                      </p>
+                  <th class="item_<%= @item.id %>">
+                    <%= render 'items/popular', item: @item %>
                   </th>
                 </tr>
               <% end %>
+	          </table>
 	        </div>
 	      </div>
 

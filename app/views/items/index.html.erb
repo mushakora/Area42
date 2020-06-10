@@ -9,7 +9,7 @@
           <%= attachment_image_tag(@item, :image, :fill,150,150,fallback: "no_image.jpg") %>
           <% end %>
       </th>
-    　<th style="font-size: 35px; text-align: center;"><%= link_to @item_ranking.first.name %></th>
+    　<th style="font-size: 35px; text-align: center;"><%= @item_ranking.first.name %></th>
     　<th style="font-size: 35px; text-align: center;"><%= @item_ranking.first.favorites.count %></th>
 	  </tr>
 
