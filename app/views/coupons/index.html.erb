@@ -1,6 +1,26 @@
 <div class="container">
   <div class="row">
 
+  <% if current_user.birthday.month == Time.current.month %>
+		<div class="birthday_photo">
+		  <div class="ribon">
+		    <div class="caption"><span>Happy</span></div>
+		    <p class="birthday_title">
+			  Happy Birthday!
+			  </p>
+			  <p class="birthday_text">
+			  今月お誕生日のあなたへ</br>
+			  特別クーポンをプレゼント</br>
+        ぜひご利用ください
+			  </p>
+			</div>
+		</div>
+			<p class="birthday_coupon">
+			Happy Birthdayクーポン</br>
+			お弁当１品どれでも100円引き
+			</p>
+  <% end %>
+
   	<h2 style="text-align: center; margin-top: 100px;">クーポン</h2>
 
       <div class="col-xs-4">
@@ -25,12 +45,13 @@
               <%= render 'items/popular', item: @item_ranking.first %>
             </div>
 
-	          <p class="coupon_comment">表示価格より50円OFFとなるクーポンです</br>
+	          <p class="coupon_comment">表示価格より50円引きとなるクーポンです</br>
 	                                    注文の際にこの画面をご提示ください
 	          </p>
-            <p class="coupon_info">※ 投票数の多いものが選ばれやすくなります</br>
-                                   お気に入りのお弁当にぜひ投票ください</br>
-                                   (投票は⭐️のアイコンを押してください)
+            <p class="coupon_info">
+            ※ 投票数の多いものが選ばれやすくなります</br>
+            お気に入りのお弁当にぜひ投票ください</br>
+            (投票は⭐️のアイコンを押してください)
             </p>
   </div>
 </div>

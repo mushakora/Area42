@@ -218,3 +218,69 @@ iframe {
   -o-transition: all 0.7s ease;
   transition: all  0.7s ease;
 }
+
+.ribon {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.ribon .caption {
+  display: inline;
+}
+
+.ribon span {
+  position: absolute;
+  display: inline-block;
+  top: 30px;
+  left: -45px;
+  width: 200px;
+  padding: 2px 10px;
+  background: #cc0c0c;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  transform: rotate(-45deg);
+}
+
+.birthday_title {
+  text-align: center;
+  font-size: 60px;
+  color: #DC143C;
+  padding-top: 5%;
+  padding-left: 10%;
+  font-family: 'Economica', sans-serif;
+  font-weight: bold;
+}
+
+.birthday_text {
+  text-align: center;
+  font-size: 35px;
+  color: #DC143C;
+  padding-top: 3%;
+  font-weight: bold;
+}
+
+.birthday_coupon {
+  font-size: 40px;
+  color: #fff;
+  margin-top: 1px;
+  margin-left: 15%;
+  text-align: center;
+  width: 70%;
+  border: 5px solid; border-color: #ff9999;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+  background-color: #ff9999;
+}
+
+.birthday_photo {
+  margin-top: 10px;
+  margin-left: 15%;
+  width: 70%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-image: image-url("<%= asset_path('baloon.jpg') %>");
+}
