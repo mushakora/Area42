@@ -26,7 +26,18 @@
               <% if @user.birthday.present? %>
                 <th><%= @user.birthday.strftime('%-m月  %-d日') %></th>
               <% else %>
-                <th><%= f.date_select :birthday, discard_year: true, use_month_numbers: true, date_separator: '月', prompt: "--" %>日
+                <th><%== sprintf(
+                    f.date_select(
+                      :birthday,
+                        {:discard_year => true,
+                        :use_month_numbers => true,
+                        :date_separator => '%s',
+                        :time_separator =>'時',
+                        :datetime_separator =>'日'},
+                        :onchange => "generateDay(this)"
+                      ), '月'
+                    )
+                  %>日
                   <p>※誕生日を一度登録されると変更できなくなります</p>
                 </th>
               <% end %>

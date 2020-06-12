@@ -21,7 +21,18 @@
 
         <tr>
           <th><%= f.label :"誕生日" %></th>
-          <th><%= f.date_select :birthday, discard_year: true, use_month_numbers: true, date_separator: '月', prompt: "--" %>日</th>
+            <th><%== sprintf(
+            f.date_select(
+              :birthday,
+                {:discard_year => true,
+                :use_month_numbers => true,
+                :date_separator => '%s',
+                :time_separator =>'時',
+                :datetime_separator =>'日'},
+                :onchange => "generateDay(this)"
+              ), '月'
+            )
+          %>日</th>
         </tr>
 
         <tr>

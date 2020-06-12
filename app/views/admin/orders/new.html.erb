@@ -29,7 +29,18 @@
         </div>
         <div class="date_info">
           <%= form.label :納品日, class: "col-xs-offset-2" %>
-          <%= form.date_select :delivery_date, discard_year: true, use_month_numbers: true, date_separator: '月', selected:Date.tomorrow %>
+          <%== sprintf(
+          form.date_select(
+            :delivery_date,
+              {:discard_year => true,
+              :use_month_numbers => true,
+              :date_separator => '%s',
+              :time_separator =>'時',
+              :datetime_separator =>'日'},
+              :onchange => "generateDay(this)"
+            ), '月',
+          )
+        %>日
         </div>
         <%= form.submit '発注書作成', class: "btn btn-primary pull-right" %>
       </div>
