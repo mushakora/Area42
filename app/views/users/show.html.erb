@@ -20,11 +20,7 @@
 
 	        <tr>
             <th>誕生日</th>
-              <% if @user.birthday.present? %>
-	              <th><%= @user.birthday.strftime('%-m月  %-d日') %></th>
-              <% else %>
-                <th>未登録</th>
-              <% end %>
+	          <th><%= @user.birthday.strftime('%-m月  %-d日') %></th>
 	        </tr>
 	      </table>
         <%= link_to '編集する', edit_user_path(@user), class: "btn btn-primary col-xs-4 col-xs-offset-4" %>
