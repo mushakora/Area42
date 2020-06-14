@@ -19,7 +19,7 @@
 
           <tr>
             <th><%= f.label :"利用予定住所" %></th>
-            <th><%= f.select :address,options_for_select([["未選択","未選択"],['六本木', '六本木'], ['銀座', '銀座'],['赤坂','赤坂']]), class: "btn btn-info" %></th>
+            <th><%= f.select :address,options_for_select([[@user.address],['六本木', '六本木'], ['銀座', '銀座'],['赤坂','赤坂']]), class: "btn btn-info" %></th>
           </tr>
 
           <div class="setday">

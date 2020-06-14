@@ -6,12 +6,12 @@
           <table class="table">
             <tr>
               <th><%= f.label :'メールアドレス' %></th>
-              <th><%= f.email_field :email, autofocus: true, autocomplete: "email" %></th>
+              <th><%= f.email_field :email, autofocus: true, autocomplete: "email", required: true %></th>
             </tr>
 
             <tr>
               <th><%= f.label :'パスワード' %></th>
-              <th><%= f.password_field :password, autocomplete: "current-password" %></th>
+              <th><%= f.password_field :password, autocomplete: "current-password", required: true %></th>
             </tr>
           </table>
         <%= f.submit "ログイン", class: "btn btn-primary col-xs-offset-5" %>

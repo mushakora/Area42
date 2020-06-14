@@ -8,8 +8,8 @@
           <table class="table">
             <thead>
               <tr>
-                <th>名前</th>
                 <th>ジャンル</th>
+                <th>名前</th>
               </tr>
             </thead>
 
@@ -18,8 +18,8 @@
                 <%= form.fields_for :order_materials do |f| %>
                   <tr>
                     <%= f.hidden_field :material_id, value: m.id %>
-                    <td><%= m.name %></td>
                     <td><%= m.genre %></td>
+                    <td><%= m.name %></td>
                     <td><%= f.select :material_count, options_for_select((0..10)) %></td>
                   </tr>
                 <% end %>

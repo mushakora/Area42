@@ -15,9 +15,9 @@
 
 		      <tbody>
 		        <% @order.order_materials.each do |order_material| %>
-                  <% if order_material.material_count > 0 %>
-                    <tr>
-			          <td><%= order_material.material.genre %></td>
+              <% if order_material.material_count > 0 %>
+                <tr>
+			            <td><%= order_material.material.genre %></td>
 		              <td><%= order_material.material.name %></td>
 		              <td><%= order_material.material_count %></td>
 		            </tr>
