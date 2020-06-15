@@ -37,8 +37,10 @@
           </div>
         </div>
 
-            <p style="font-size: 30px; margin-left: 40%; margin-top: 10%;">お仕事応援クーポン</br>
-               <%= @item_ranking.first.price %> 円 =>  <a style="font-size: 50px; color: #FF69A3; text-decoration: none;"><%= (@item_ranking.first.price - 50).to_i %> 円</a>
+            <p style="font-size: 30px; margin-left: 40%; margin-top: 10%;">
+						No.15680-<%= current_user.id %></br>
+						お仕事応援クーポン</br>
+            <%= @item_ranking.first.price %> 円 =>  <a style="font-size: 50px; color: #FF69A3; text-decoration: none;"><%= (@item_ranking.first.price - 50).to_i %> 円</a>
             </p>
 
             <div class="item_<%= @item_ranking.first.id %>">

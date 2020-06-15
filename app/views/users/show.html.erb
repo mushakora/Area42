@@ -39,11 +39,13 @@
 	    	      <th><%= @item_ranking.first.name %></th>
 	    	    </tr>
 	      </table>
-            <p style="font-size: 30px; margin-left: 10%;">生活応援クーポン</br>
-              <%= @item_ranking.first.price %> 円 =>  <a style="font-size: 50px; color: #FF69A3; text-decoration: none;"><%= (@item_ranking.first.price - 50).to_i %> 円</a>
-            </p>
-            <div class="item_<%= @item_ranking.first.id %>">
-              <%= render 'items/popular', item: @item_ranking.first %>
-            </div>
+					<p style="font-size: 30px; margin-left: 10%;">
+					No.15680-<%= current_user.id %></br>
+					お仕事応援クーポン</br>
+					<%= @item_ranking.first.price %> 円 =>  <a style="font-size: 50px; color: #FF69A3; text-decoration: none;"><%= (@item_ranking.first.price - 50).to_i %> 円</a>
+					</p>
+					<div class="item_<%= @item_ranking.first.id %>">
+						<%= render 'items/popular', item: @item_ranking.first %>
+					</div>
   </div>
 </div>
