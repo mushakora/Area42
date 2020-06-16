@@ -14,6 +14,14 @@ class User < ApplicationRecord
   	  super && (self.deleted_at == false)
   end
 
+  def self.search(search)
+    if search
+      where(['first_name LIKE ? OR last_name LIKE ?', "%#{search}%", "%#{search}%"])
+    else
+      all
+    end
+  end
+
   attribute :user_status, :string, default: '有効'
   attribute :deleted_at, :boolean, default: 'false'
 
