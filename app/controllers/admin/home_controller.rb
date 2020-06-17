@@ -1,5 +1,8 @@
 class Admin::HomeController < ApplicationController
   def top
+      @address1 = User.where(address:'六本木')
+      @address2 = User.where(address:'赤坂')
+      @address3 = User.where(address:'銀座')
   end
 
   private
