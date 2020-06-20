@@ -10,7 +10,7 @@ class Admin::OrdersController < ApplicationController
 
   def new
     @order = Order.new
-    @materials = Material.all
+    @materials = Material.all.order("genre DESC")
     @order.order_materials.build
   end
 

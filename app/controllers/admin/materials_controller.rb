@@ -1,7 +1,7 @@
 class Admin::MaterialsController < ApplicationController
   before_action :admin_user
   def index
-  	  @materials = Material.all
+  	  @materials = Material.all.order("genre DESC")
       @material = Material.new
   end
 

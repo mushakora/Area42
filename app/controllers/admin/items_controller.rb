@@ -1,7 +1,7 @@
 class Admin::ItemsController < ApplicationController
 before_action :admin_user
   def index
-      @items = Item.all
+      @items = Item.all.order("sale_status")
   end
 
   def show
