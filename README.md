@@ -39,8 +39,59 @@
  * 画像アップロード機能
  * 非同期通信(いいね機能)
 
+# 環境・言語など
+- OS  
+Linux(Ubuntu)
+
+- 言語  
+HTML, CSS, JavaScript, Ruby, SQL
+
+- フレームワーク  
+Ruby on Rails
+
+- CSSフレームワーク  
+Bootstrap
+
+- JSライブラリ  
+jQuery
+
+- インフラ  
+AWS (EC2, RDS, AMI, EIP)
+
+- その他ツールなど  
+Vagrant, VirtualBox, Slack, zoom, GitHub
+
+ # テストユーザー
+- メールアドレス：mushakora89br@yahoo.co.jp  
+- パスワード：mushakora89br
+
+
 # 設計書
  https://drive.google.com/drive/folders/1b-tu8owZPxQVaSUIJoY0jJsVZf8moG-j?usp=sharing
 
 # 機能一覧
  https://docs.google.com/spreadsheets/d/14GaNrCdtpXdACJL4Tne3bEBn2R-asZTjfc7mfC4snjw/edit#gid=0
+
+# プログラミングスクールを通して学んだこと、やってきたこと
+- 設計  
+画面設計、機能一覧、データベース設計(ER図)、アプリケーション詳細設計
+
+- プロジェクト管理  
+チームビルディング、WBS管理、KPT、GitHub(チーム開発)
+
+- フロントエンド  
+HTML/CSS
+Bootstrap
+JavaScript/jQuery/Ajax
+
+- サーバサイド  
+Ruby/Ruby on Rails
+利用したライブラリ(devise,kaminari,refile,pry-byebug)
+
+- その他  
+Rspec
+SQL
+
+- インフラ  
+AWS(EC2,RDS,ELB)
+Vagrant/VirtualBox
