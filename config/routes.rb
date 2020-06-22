@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  root 'home#top'
+  root 'home#portfolio'
   get 'home/top'
   get 'home/about'
   get 'home/login'
-  get 'home/portfolio'
+  get 'home/top'
   get 'admin/home/top'
   get 'coupons/index'
   devise_for :admins

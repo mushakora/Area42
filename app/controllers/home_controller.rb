@@ -6,5 +6,6 @@ class HomeController < ApplicationController
   end
 
   def portfolio
+      render layout: false
   end
 end
