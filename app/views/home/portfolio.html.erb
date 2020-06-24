@@ -1,26 +1,63 @@
-<div class="container">
-	<div class="row">
-    <h1>ポートフォリオ</h1>
-    <%= link_to 'Area42', home_top_path %>
-      <h3>OS</h3>
-      Linux(Ubuntu)
+<div class="portfolio_photo">
+  <div class="portfolio_info">
+  目次<br>
+  ポートフォリオ紹介<br>
+  環境・言語<br>
+  プログラミングスクール<br>
+  プロフィール<br>
+  </div>
+  <div class="portfolio_text">portfolio</div>
+</div>
 
-      <h3>言語</h3>
-      HTML, CSS, JavaScript, Ruby, SQL
+  <div class="skill_photo">
+    <div class="skill_title">skills</div><br>
+    <div class="skill_text">
+      HTML<br>
+      CSS<br>
+      JavaScript<br>
+      Ruby<br>
+      SQL<br>
+      Ruby on Rails<br>
+      jQuery<br>
+    </div>
+  </div>
 
-      <h3>フレームワーク</h3>
-      Ruby on Rails
 
-      <h3>CSSフレームワーク</h3>
-      Bootstrap
+    <h2 style="text-align: center; padding-top: 50px;">ポートフォリオ紹介</h2>
+      <div class="web_info">
+      サイト名<br>
+      Area42<br>
 
-      <h3>JSライブラリ</h3>
-      jQuery
+      概要<br>
+      移動販売車(キッチンカー)での弁当の販売、閲覧サイト及び管理者側での運営管理<br>
 
-      <h3>インフラ</h3>
-      AWS (EC2, RDS, AMI, EIP)
+      テーマ<br>
+      自身で移動販売車で営業することを想定したサイト<br>
+      管理者側に重きをおいたwebアプリケーション<br>
 
-      <h3>その他ツールなど</h3>
-      Vagrant, VirtualBox, Slack, zoom, GitHub
-		</div>
-	</div>
+      テーマを選んだ理由<br>
+      自分の考える将来やってみたいビジネスプランを具現化してみようと思い製作<br>
+
+      利用目的<br>
+      ・ 顧客側<br>
+      webページの閲覧が可能で登録することでクーポンなどが使えるようになる<br>
+
+      ・ 管理者側<br>
+      販売する弁当の登録、編集ができる<br>
+      登録しているユーザーの管理、検索が可能で個別にメモを取れるようになっている<br>
+      発注書作成が可能で在庫や過去の発注を確認できる
+      </div>
+      <div class="web_text">
+      キッチンカーを紹介する<br>
+      Webアプリケーション
+      </div>
+      <%= link_to home_portfolio_path do %>
+        <div class="web_photo">
+        </div>
+      <% end %>
+
+      <style>
+      nav {
+        display: none;
+      }
+      </style>
