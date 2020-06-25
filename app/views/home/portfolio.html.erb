@@ -2,11 +2,11 @@
   <div class="portfolio_info">
   目次<br>
   ポートフォリオ紹介<br>
-  環境・言語<br>
   プログラミングスクール<br>
   プロフィール<br>
+  お問い合わせ<br>
   </div>
-  <div class="portfolio_text">portfolio</div>
+  <div class="portfolio_text">work</div>
 </div>
 
   <div class="skill_photo">
@@ -22,40 +22,98 @@
     </div>
   </div>
 
-
-    <h2 style="text-align: center; padding-top: 50px;">ポートフォリオ紹介</h2>
+  <div class="web_box">
+    <div class="web_title">
+    portfolio
+    </div>
       <div class="web_info">
-      サイト名<br>
-      Area42<br>
+        サイト名<br>
+        <div class="text_info">Area42</div>
+          概要<br>
+          移動販売車(キッチンカー)での弁当の販売、閲覧サイト及び管理者側での運営管理<br>
 
-      概要<br>
-      移動販売車(キッチンカー)での弁当の販売、閲覧サイト及び管理者側での運営管理<br>
+          テーマ<br>
+          自身で移動販売車で営業することを想定したサイト<br>
+          管理者側に重きをおいたwebアプリケーション<br>
 
-      テーマ<br>
-      自身で移動販売車で営業することを想定したサイト<br>
-      管理者側に重きをおいたwebアプリケーション<br>
+          テーマを選んだ理由<br>
+          自分の考える将来やってみたいビジネスプランを具現化してみようと思い製作<br>
 
-      テーマを選んだ理由<br>
-      自分の考える将来やってみたいビジネスプランを具現化してみようと思い製作<br>
+          利用目的<br>
+          顧客側<br>
+          webページの閲覧が可能で登録することでクーポンなどが使えるようになる<br>
 
-      利用目的<br>
-      ・ 顧客側<br>
-      webページの閲覧が可能で登録することでクーポンなどが使えるようになる<br>
-
-      ・ 管理者側<br>
-      販売する弁当の登録、編集ができる<br>
-      登録しているユーザーの管理、検索が可能で個別にメモを取れるようになっている<br>
-      発注書作成が可能で在庫や過去の発注を確認できる
+          管理者側<br>
+          販売する弁当の登録、編集ができる<br>
+          登録しているユーザーの管理、検索が可能で個別にメモを取れるようになっている<br>
+          発注書作成が可能で在庫や過去の発注を確認できる
       </div>
+  </div>
       <div class="web_text">
       キッチンカーを紹介する<br>
       Webアプリケーション
+      <div class="go">
+      GO  ➡︎
       </div>
-      <%= link_to home_portfolio_path do %>
+      </div>
+      <%= link_to home_about_path do %>
         <div class="web_photo">
         </div>
       <% end %>
 
+  <div class="school_photo">
+    <div class="school_title">
+    school
+    </div>
+    <div class="school_text">
+
+      フロントエンド<br>
+      HTML/CSS<br>
+      Bootstrap<br>
+      JavaScript/jQuery/Ajax<br>
+
+      サーバサイド<br>
+      Ruby/Ruby on Rails<br>
+
+      その他<br>
+      Rspec<br>
+      SQL<br>
+
+      インフラ<br>
+      AWS(EC2,RDS,ELB)<br>
+      Vagrant/VirtualBox<br>
+
+      設計<br>
+      画面設計、機能一覧、データベース設計(ER図)、アプリケーション詳細設計<br>
+
+      プロジェクト管理<br>
+      チームビルディング、WBS管理、KPT、GitHub(チーム開発)<br>
+    </div>
+  </div>
+
+  <div class="profile_box">
+    <div class="profile_title">
+    profile
+    </div>
+    <div class="profile_text">
+    日常生活において触れる機会の多くなった技術を身につけ、<br>
+    今まで仕事を通して人へのサービスや気遣いを大事にしてきた<br>
+    自分のマインドを落とし込むことにより<br>
+    多くの人へサービスを提供することができるのではないかと考え、エンジニアになる決意をしました。
+    前職でも顧客情報をデータで取り扱っていたのですが、<br>
+    使い方や動作に不満を抱くこともあり自分の手でより良いものにできないかと考えておりました。<br>
+    今後もこういったサービスが増えていく中で自身も作り手の一員となり、<br>
+    今まで培った知識や経験を生かして形として表現し、<br>
+    仕事を通して人から感謝され喜ばれるものを作りたいと考えております。
+    </div>
+  </div>
+
+  <div class="profile_info">
+    山城　康平<br>
+    1988/07/31
+  </div>
+  <div class="profile_photo">
+  </div>
       <style>
       nav {
         display: none;
