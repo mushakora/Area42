@@ -42,7 +42,7 @@ function generateDay(obj) {
 }
 
 // トップに戻るボタンの設定 //
-$(function() {
+$(document).on('turbolinks:load', function() {
   $('#back a').on('click',function(){
     $('body, html').animate({
       scrollTop:0
@@ -51,7 +51,7 @@ $(function() {
   });
 });
 
-$(function(){
+$(document).on('turbolinks:load', function() {
   $('#back a').mouseover(function(){
       $('#back a').addClass('back-btn');
   });
