@@ -62,7 +62,7 @@ AWS (EC2, RDS, AMI, EIP)
 Vagrant, VirtualBox, Slack, zoom, GitHub
 
  # テストユーザー
-- メールアドレス：mushakora89br@yahoo.co.jp  
+- メールアドレス：mushakora89br@gmail.com  
 - パスワード：mushakora89br
 
 
