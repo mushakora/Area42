@@ -26,37 +26,37 @@
       <ul class="nav navbar-nav navbar-right" style="padding-right: 20px;">
         <% if admin_signed_in? %>
 
-        <li><%= link_to "管理画面TOP" , admin_home_top_path %></li>
+        <li><%= link_to "管理画面TOP" , admin_home_top_path, :style=>"color: #000;" %></li>
 
-        <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
+        <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete, :style=>"color: #000;" %></li>
 
         <% elsif current_page?(new_admin_session_path) %>
   <!-- お客さんのヘッダー-->
         <% elsif user_signed_in? %>
 
-        <p class="navbar-text" style="font-size: 15px; font-family: Hannari;">ようこそ  <%= current_user.name %>  さん。</p>
+        <p class="navbar-text" style="font-size: 15px; font-family: Hannari; color: #000;">ようこそ  <%= current_user.name %>  さん。</p>
 
-        <li><%= link_to "このサイトについて", home_about_path %></li>
+        <li><%= link_to "このサイトについて", home_about_path, :style=>"color: #000;" %></li>
 
-        <li><%= link_to "マイページ", user_path(current_user.id) %></li>
+        <li><%= link_to "マイページ", user_path(current_user.id), :style=>"color: #000;" %></li>
 
-        <li><%= link_to "メニュー", items_path %></li>
+        <li><%= link_to "メニュー", items_path, :style=>"color: #000;" %></li>
 
-        <li><%= link_to "クーポン", coupons_index_path %></li>
+        <li><%= link_to "クーポン", coupons_index_path, :style=>"color: #000;" %></li>
 
-        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, :style=>"color: #000;" %></li>
 
         <% else %>
 
-        <p class="navbar-text" style="font-size: 20px; font-family: Hannari;">ようこそ  ゲスト  さん。</p>
+        <p class="navbar-text" style="font-size: 20px; font-family: Hannari; color: #000">ようこそ  ゲスト  さん。</p>
 
-        <li><%= link_to "このサイトについて", home_about_path %></li>
+        <li><%= link_to "このサイトについて", home_about_path, :style=>"color: #000;" %></li>
 
-        <li><%= link_to "メニュー" , items_path %></li>
+        <li><%= link_to "メニュー" , items_path, :style=>"color: #000;" %></li>
 
-        <li><%= link_to "新規登録" , new_user_registration_path %></li>
+        <li><%= link_to "新規登録" , new_user_registration_path, :style=>"color: #000;" %></li>
 
-        <li><%= link_to "ログイン", user_session_path %></li>
+        <li><%= link_to "ログイン", user_session_path, :style=>"color: #000;" %></li>
 
         <% end %>
       </ul>
