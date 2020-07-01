@@ -60,3 +60,13 @@ $(document).on('turbolinks:load', function() {
       $('#back a').removeClass('back-btn');
   });
 });
+
+$(document).on('turbolinks:load', function() {
+  $('.skill_text').hover(
+  function(){
+    $('.detail_text').animate({'marginRight':'0'},1000);
+  },
+  function () {
+    $('.detail_text').animate({'marginRight':'-50%'},1000);
+  });
+});
