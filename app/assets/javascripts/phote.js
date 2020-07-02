@@ -70,3 +70,13 @@ $(document).on('turbolinks:load', function() {
     $('.detail_text').animate({'marginRight':'-50%'},1000);
   });
 });
+
+$(document).on('turbolinks:load', function() {
+  $('.school_text').hover(
+  function(){
+    $('.detail_school_text').animate({'marginRight':'0'},1000);
+  },
+  function () {
+    $('.detail_school_text').animate({'marginRight':'-50%'},1000);
+  });
+});
