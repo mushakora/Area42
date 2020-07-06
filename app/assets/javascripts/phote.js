@@ -64,19 +64,19 @@ $(document).on('turbolinks:load', function() {
 $(document).on('turbolinks:load', function() {
   $('.skill_text').hover(
   function(){
-    $('.detail_text').animate({'marginRight':'0'},1000);
+    $('.detail_text').show(300);
   },
   function () {
-    $('.detail_text').animate({'marginRight':'-50%'},1000);
+    $('.detail_text').hide(300);
   });
 });
 
 $(document).on('turbolinks:load', function() {
   $('.school_text').hover(
   function(){
-    $('.detail_school_text').animate({'marginRight':'0'},1000);
+    $('.detail_school_text').show(300);
   },
   function () {
-    $('.detail_school_text').animate({'marginRight':'-50%'},1000);
+    $('.detail_school_text').hide(300);
   });
 });
