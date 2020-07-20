@@ -72,11 +72,7 @@ $(document).on('turbolinks:load', function() {
 });
 
 $(document).on('turbolinks:load', function() {
-  $('.school_text').hover(
-  function(){
+  $('.detail_school_button').on('click', function(){
     $('.detail_school_text').show(300);
-  },
-  function () {
-    $('.detail_school_text').hide(300);
   });
 });
