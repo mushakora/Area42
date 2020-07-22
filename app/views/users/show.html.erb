@@ -38,7 +38,7 @@
 			        <th>商品名</th>
 	    	      <th><%= @item_ranking.first.name %></th>
 	    	    </tr>
-	      </table>
+	      　</table>
 					<p style="font-size: 30px; margin-left: 10%;">
 					No.15680-<%= current_user.id %></br>
 					お仕事応援クーポン</br>
@@ -47,5 +47,9 @@
 					<div class="item_<%= @item_ranking.first.id %>">
 						<%= render 'items/popular', item: @item_ranking.first %>
 					</div>
+					<div>
+					<%= link_to 'クーポンページへ', coupons_index_path, :style=>"color: #000;" %>
+					</div>
+				</div>
   </div>
 </div>
