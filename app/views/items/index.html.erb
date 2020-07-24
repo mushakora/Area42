@@ -34,14 +34,14 @@
 	  </tr>
 	    </table>
 
-    <div class="item_set">
       <% @items.each do |item| %>
         <% if item.sale_status == 'セット' %>
+          <div class="item_set">
           全品  <div class="set_name"><%= item.name %></div>  付き
+          </div>
           <%= attachment_image_tag(item, :image, :fill,150,150,fallback: "no_image.jpg") %>
         <% end %>
       <% end %>
-    </div>
     <h2 style="text-align: center; margin-top: 100px;">弁当一覧</h2>
       <div class="font_info">
         <div class="col-xs-10 col-xs-off-1">
