@@ -39,6 +39,9 @@
           <div class="item_set">
           全品  <div class="set_name"><%= item.name %></div>  付き
           </div>
+          <div class="item_set_detail">
+          <%= item.text %>
+          </div>
           <%= attachment_image_tag(item, :image, :fill,150,150,fallback: "no_image.jpg") %>
         <% end %>
       <% end %>
